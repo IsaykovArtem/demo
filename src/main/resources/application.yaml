@@ -1,0 +1,26 @@
+logging:
+  file: logfile
+
+spring:
+  profiles:
+    active: prod
+
+---
+spring:
+  profiles:
+    active: dev
+logging:
+  level:
+    com.example.demo: debug
+    com.springframework: info
+
+---
+spring:
+  profiles:
+    active: prod
+logging:
+  level:
+    com.example.demo: trace
+    com.springframework: trace
+    org: trace
+    com.zaxxer: trace
